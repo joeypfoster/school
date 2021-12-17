@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Admin</title>
+</head>
+<body>
+
+	<form action="Connection.php" method="post">
+		<h1>Reset Order Data</h1><br>
+		<input type="submit" value="RESET ORDERS" name="Submit" >
+	</form>
+
+
+
+	<form enctype="multipart/form-data" action="Connection.php" method="post">
+		<h1>New Item</h1><br>
+
+		<label for="NEWLang">Language:</label><br>
+		<input type="radio" id="NEWLang" name="NEWLang" value="NL">
+		<label for="NEWNL">NL</label><br>
+		<input type="radio" id="NEWLang" name="NEWLang" value="EN">
+		<label for="NEWEN">EN</label><br>
+
+		<label for="NEWName">Name:</label><br>
+		<input type="text" id="NEWName" name="NEWName" value=""><br>
+		<label for="NEWCost">Cost:</label><br>
+		<input type="text" id="NEWCost" name="NEWCost" value=""><br>
+		<label for="file">Select a Picture:</label><br>
+  		<input type="file" id="image" name="image" accept="image/png"><br>
+		<label for="NEWStock">Stock:</label><br>
+		<input type="radio" id="NEWStock" name="NEWStock" value="True">
+		<label for="NEWInStock">In Stock</label><br>
+		<input type="radio" id="NEWStock" name="NEWStock" value="False">
+		<label for="NEWOutOfStock">Out Of Stock</label><br>
+		<input type="submit" value="Add Item" name="Submit" onclick="AddItem()">
+	</form>
+
+	<form action="Connection.php" method="post">
+		<h1>Update Stock</h1><br>
+
+		<label for="UPDATESTOCKLang">Language:</label><br>
+		<input type="radio" id="UPDATESTOCKLang" name="UPDATESTOCKLang" value="NL">
+		<label for="UPDATESTOCKNL">NL</label><br>
+		<input type="radio" id="UPDATESTOCKLang" name="UPDATESTOCKLang" value="EN">
+		<label for="UPDATESTOCKEN">EN</label><br>
+
+		<label for="UPDATESTOCKName">Name:</label><br>
+		<input type="text" id="UPDATESTOCKName" name="UPDATESTOCKName" value=""><br>
+		<label for="UPDATESTOCKStock">Stock:</label><br>
+		<input type="radio" id="UPDATESTOCKStock" name="UPDATESTOCKStock" value="True">
+		<label for="UPDATESTOCKInStock">In Stock</label><br>
+		<input type="radio" id="UPDATESTOCKStock" name="UPDATESTOCKStock" value="False">
+		<label for="UPDATESTOCKOutOfStock">Out Of Stock</label><br>
+		<input type="submit" value="Update Stock" name="Submit" onclick="UpdateSTock()">
+	</form>
+
+	<form action="Connection.php" method="post">
+		<h1>Update Cost</h1><br>
+
+		<label for="UPDATECOSTLang">Language:</label><br>
+		<input type="radio" id="UPDATECOSTLang" name="UPDATECOSTLang" value="NL">
+		<label for="UPDATECOSTNL">NL</label><br>
+		<input type="radio" id="UPDATECOSTLang" name="UPDATECOSTLang" value="EN">
+		<label for="UPDATECOSTEN">EN</label><br>
+
+		<label for="UPDATECOSTName">Name:</label><br>
+		<input type="text" id="UPDATECOSTName" name="UPDATECOSTName" value=""><br>
+		<label for="UPDATECOSTCost">New Cost:</label><br>
+		<input type="text" id="UPDATECOSTCost" name="UPDATECOSTCost" value=""><br>
+		<input type="submit" value="Update Cost" name="Submit" onclick="UpdateCost()">
+	</form>
+
+	<form action="Connection.php" method="post">
+		<h1>Update Name</h1><br>
+
+		<label for="REALLang">Language:</label><br>
+		<input type="radio" id="REALLang" name="REALLang" value="NL">
+		<label for="REALNL">NL</label><br>
+		<input type="radio" id="REALLang" name="REALLang" value="EN">
+		<label for="REALEN">EN</label><br>
+		
+		<label for="REALName">Name:</label><br>
+		<input type="text" id="REALName" name="REALName" value=""><br>
+		<label for="NName">New Name:</label><br>
+		<input type="text" id="UPDATENAMEName" name="UPDATENAMEName" value=""><br>
+		<input type="submit" value="Update Name" name="Submit" onclick="UpdateName()">
+	</form>
+
+
+	<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
