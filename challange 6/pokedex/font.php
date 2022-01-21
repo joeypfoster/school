@@ -1,6 +1,6 @@
 <?php
 $base = "https://pokeapi.co/api/v2/pokemon/";
-$type = "https://pokeapi.co/api/v2/pokemon-species/";
+$type = "https://pokeapi.co/api/v2/pokemon-form/";
 
 for($id = 1; $id < 10; $id++){
     $data = file_get_contents($base.$id.'/');
