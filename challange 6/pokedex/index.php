@@ -8,7 +8,7 @@
  } 
 
  //write query for all products
- $sql = 'SELECT id, name, power, gender FROM data';
+ $sql = 'SELECT ID, NAME, POWER FROM data';
 
  // make query & get result
  $result = mysqli_query($conn, $sql);
@@ -47,27 +47,24 @@
 
 <div class="pokedex">
 
-<?php foreach($kantine as $product): ?>
+<?php foreach($kantine as $product):  $result = str_replace( array("#", "'", ";"), '', $product['ID']); ?>
 
-    <div id="<?=$product['id'];?>" class="data">
+    <div id="<?=$product['ID'];?>" class="data">
 
-        <img src="images/<?= $product['id'];?>.png" alt="" width="200px" height="200px">
+        <img src="images/<?= $result?>.png" alt="" width="200px" height="200px">
 
             <div class="align">
-                <p class="id">#<?= $product['id']; ?></p>
+                <p class="id"><?= $product['ID'];?></p>
             </div>
 
             <div class="align1">
-                <p1 class="name"><?= $product['name']; ?></p1>
+                <p1 class="name"><?= $product['NAME']; ?></p1>
             </div>
                 
             <div class="align2">
-                <p2 class="power"><?= $product['power']; ?></p2>
+                <p2 class="power"><?= $product['POWER']; ?></p2>
             </div>	
-                
-            <div class="align3">
-                <p3 class="gender"><?= $product['gender']; ?></p3>
-            </div>
+            
 
  
 
