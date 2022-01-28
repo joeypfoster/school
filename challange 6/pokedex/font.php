@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "jasper";
-$password = "Jaspertje08";
-$dbname = "pokedex";
+$username = "root";
+$password = "";
+$dbname = "test";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 $base = "https://pokeapi.co/api/v2/pokemon/";
 $type = "https://pokeapi.co/api/v2/pokemon-form/";
 
-for($id = 424; $id < 899; $id++){
+for($id = 603; $id < 899; $id++){
     if ($id < 10) {
         $ID = "#00".$id;
     } else if ($id < 100) {
