@@ -1,49 +1,57 @@
 <?php 
-	$servername = "localhost";
-	$username = "root";
-	$password = "root";
-	$dbname = "challenge7";
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "challenge7";
+  
 
-	// Create connection
-	$conn = new mysqli($servername, $username, $password, $dbname);
+  if ($_POST['date'] == "2022/03/03") {
+    $date = "dateone";
+  } else if ($_POST['date'] == "2022/03/04") {
+    $date = "datetwo";
+  }
+  
+  $time = $_POST['Time'];
+  $mail = $_POST['mail'];
+  $name = $_POST['name'];
 
-	// Check connection
-	if ($conn->connect_error) {
-	  die("Connection failed: " . $conn->connect_error);
-	}
+  $user = "Name:".$name." Mail:".$mail;
+  // Create connection
+  $conn = new mysqli($servername, $username, $password, $dbname);
 
-	$sql = "SELECT ID, DATE, TIME, NAME FROM meetingGreat";
+  // Check connection
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+  }
+
+
+  $sql = "SELECT * FROM $date WHERE TIME='$time'";
       $result = $conn->query($sql);
 
-      if ($result->num_rows > 0) {
-          // output data of each row
-          while($row = $result->fetch_assoc()) {
-            $idList = $row["ID"];
-            echo $idList;
-          }
-      } else {
-          echo "0 results";
+  if ($result->num_rows > 0) {
+  // output data of each row
+    while($row = $result->fetch_assoc()) {
+
+      if ($row["FREE"] == "TRUE") {
+        $SQL = "UPDATE $date SET FREE='FALSE', USER='$user' WHERE TIME='$time'";
+
+        if ($conn->query($SQL) === TRUE) {
+          echo "New record created successfully";
+        } else {
+          echo "Error: " . $SQL . "<br>" . $conn->error;
+        }
+      }else {
+        echo "this time is already taken!!!";
       }
 
-      echo $idList;
+    }
+  } else {
+    echo "0 results";
+  }
 
-      $iD = $idList +1;
 
-      $date = '"'. $_POST['date']. '"';
-      $time = '"'. $_POST['time']. '"';
-      $name = '"'. $_POST['name']. '"';
 
-	$SQL = "INSERT INTO meetingGreat (ID, DATE, TIME, NAME) VALUES ($iD, $date, $time, $name)";
+  
 
-	if (mysqli_multi_query($conn, $SQL)) {
 
-        echo "New records created successfully";
-
-      } else {
-
-        echo "Error: " . $SQL. "<br>" . mysqli_error($conn);
-
-      }
-
-	echo $_POST['name']. "   ". $_POST['date']. "   ". $_POST['time']
 ?>

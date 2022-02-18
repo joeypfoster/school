@@ -1,0 +1,28 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	background: #E7DFBF;
+}
+
+.timeOFdate {
+	border-radius: 10px;
+	border: solid;
+	border-width: 5px;
+	border-color: black;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+
+.timeOFdate h1 {
+	margin-left: 5px;
+}
+
+.timeOFdate p {
+	font-weight: bold;
+	margin-left: 10px;
+}
