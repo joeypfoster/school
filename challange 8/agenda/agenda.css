@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    position: 0;
+}
+
+html {
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  background-color: pink;
+}
+
+header {
+  width: 100%;
+  height: 200px;
+  background-color: #F58E62;
+  position: fixed;
+}
+
+.sidenav {
+  width: 275px;
+  height: 100%;
+  background-color: #00555C;
+  position: fixed;
+  left: 0;
+  top: 200px;
+  padding-top: 45px;
+  z-index: 1;
+  overflow-x: hidden;
+}
+.sidenav a {
+  margin-left: 50px;
+  font-size: 40px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.agenda-btn {
+  opacity: 100%;
+}
+
+.approval-btn {
+  opacity: 70%;
+}
+
+.archive-btn {
+  opacity: 70%;
+}
+
+#content {
+  padding-top: 200px;
+}
+
+.dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 30px;
+  color: white;
+  display: block;
+  border: none;
+  background: none;
+  width: 50%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+.dropdown-btn:hover {
+  color: rgb(230, 230, 230);
+}
+
+.main {
+  margin-left: 200px;
+  font-size: 20px;
+  padding: 0px 10px;
+}
+
+.active {
+  color: #00555C;
+}
+
+.dropdown-container {
+  display: none;
+  background-color: white .75;
+  padding-left: 8px;
+}
+
+.fa-caret-down {
+  float: left;
+  padding-right: 10px;
+}
+
+.dropdown {
+  padding-top: 100px;
+  margin-left: 25%;
+}
+
+.fa-caret-up {
+  float: left;
+  padding-right: 10px;
+}
+
+h1 {
+  color: #00555C;
+  font-size: 85px;
+  text-align: center;
+  margin-left: 10%;
+  padding-top: 50px;
+  padding-left: 0;
+}
+
+.image {
+  padding-top: 25px;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  margin-left: 40%;
+}
