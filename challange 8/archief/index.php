@@ -2,7 +2,7 @@
 	session_start();
 	if(!$_SESSION['auth']){
 		header('HTTP/1.0 401 Unauthorized');
-		header('Location: http://localhost:8888');
+		header('Location: http://localhost');
 	}
 ?>
 <!DOCTYPE html>

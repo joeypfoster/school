@@ -17,3 +17,10 @@ for (i = 0; i < dropdown.length; i++) {
   }
   });
 }
+
+
+
+function myFunction() {
+    var popup = document.getElementById("popupADD");
+    popup.classList.toggle("hide");
+}

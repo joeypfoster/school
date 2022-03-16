@@ -34,7 +34,7 @@
 	    exit;
 	} else {
 		$_SESSION['auth'] = true;
-		header('Location: http://localhost:8888/archief');
+		header('Location: http://localhost/agenda');
 	}
 
 ?>

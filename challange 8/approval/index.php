@@ -1,4 +1,11 @@
 <?php
+session_start();
+    if(!$_SESSION['auth']){
+        header('HTTP/1.0 401 Unauthorized');
+        header('Location: http://localhost');
+    }
+
+
  // connect to database
  $conn = mysqli_connect('localhost', 'root', '', 'testcars');
 

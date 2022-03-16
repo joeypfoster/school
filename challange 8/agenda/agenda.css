@@ -118,3 +118,7 @@ h1 {
   height: 150px;
   margin-left: 40%;
 }
+
+.hide {
+  display: none;
+}
