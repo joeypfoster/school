@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "Lato", sans-serif;
+}
+
+header {
+    background-color: #F58E62;
+    height: 150px;
+    width: 100%;
+    position: fixed;
+}
+
+body {
+    background-color: #F0EAD6;
+}
+
+.sidenav {
+    background-color: #00555C;
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    margin-top: 150px;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.logo {
+    display: block;
+    margin-left: 40%;
+    margin-top: 25px;
+    position: absolute;
+}
+
+h1 {
+    color: #00555C;
+    margin-left: 47.5%;
+    font-size: 65px;
+    margin-top: 40px;
+}
+
+.sidenav a {
+    margin-left: 35px;
+    font-size: 35px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    position: fixed;
+  }
+  
+  .movies-btn {
+    opacity: 70%;
+  }
+  
+  .mylist-btn {
+    opacity: 100%;
+  }
+  
+  .rewatch-btn {
+    opacity: 70%;
+  }

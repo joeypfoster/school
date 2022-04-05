@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "Lato", sans-serif;
+}
+
+header {
+    background-color: #F58E62;
+    height: 150px;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+
+body {
+    background-color: #F0EAD6;
+}
+
+.sidenav {
+    background-color: #00555C;
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    margin-top: -60px;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.logo {
+    display: block;
+    margin-left: 40%;
+    margin-top: -15px;
+    position: absolute;
+}
+
+h1 {
+    color: #00555C;
+    margin-left: 47.5%;
+    font-size: 65px;
+    margin-top: 40px;
+}
+
+.sidenav a {
+    margin-left: 35px;
+    font-size: 35px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    position: fixed;
+  }
+  
+  .movies-btn {
+    opacity: 100%;
+  }
+  
+  .mylist-btn {
+    opacity: 70%;
+  }
+  
+  .rewatch-btn {
+    opacity: 70%;
+  }
+
+.searchbar {
+    position: absolute;
+    width: 300px;
+    height: 20px;
+    border-radius: 10px;
+    padding-left: 5px;
+    border-color: black;
+}
+
+.search-btn {
+    position: absolute;
+    margin-left: 310px;
+    border-radius: 50%;
+    border-color: grey;
+    background-color: #F58E62;
+    width: 25px;
+    height: 25px;
+}
+
+.search-div {
+    padding-left: 40%;
+    padding-top: 210px;
+}
+
+.movies-div {
+    margin-top: 50px;
+    margin-left: 275px;
+}
+
+#huge-id {
+    display: inline-block;
+}
+
+.adult-poster-div {
+    background-color: transparent;
+    width: 200px;
+    height: 300px;
+    perspective: 1000px;
+    margin-right: 0px;
+    padding-left: 25px;
+    padding-top: 75px;
+}
+
+.child-poster-div {
+    display: flex;
+    flex: 2;
+    flex-wrap: wrap;
+    position: relative;
+    width: 200px;
+    height: 300px;
+    text-align: center;
+    transition: transform 0.4s;
+    transform-style: preserve-3d;
+}
+
+.adult-poster-div:hover .child-poster-div {
+    transform: rotateY(180deg);
+}
+
+.poster .poster-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.poster {
+    background-color: #bbb;
+    color: black;
+}
+
+.poster-back {
+    height: 300px;
+    width: 200px;
+    background-color: #00555C;
+    color: white;
+    transform: rotateY(180deg);
+    margin-top: -304px;
+    backface-visibility: hidden;
+    box-shadow: inset 0px 7px 7px rgba(0, 0, 0, 0.25);
+}
+
+.trailer-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background-color: #F58E62;
+    position: absolute;
+}
+
+#btns {
+    padding-top: 5px;
+}
+
+#abc {
+    margin-left: 15px;
+}
+
+.add-mylist-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background-color: #F58E62;
+    position: absolute;
+}
+
+#edf {
+    margin-left: 145px;
+}
+
+#play {
+    font-size: 20px;
+    padding-top: 2px;
+    padding-left: 3px;
+    color: #F0EAD6;
+    text-decoration: none;
+}
+
+#heart {
+    font-size: 20px;
+    padding-top: 3px;
+    color: #F0EAD6;
+}
+
+#text-movie {
+    font-size: 12.5px;
+    padding: 7px;
+}
